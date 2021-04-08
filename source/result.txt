@@ -1,1 +1,1 @@
-['Dies ist eine Datei bro. ', '', 'Kümmern Sie sich nicht mit Trashend, sie verwenden die Kraft und ', '', 'Vergiss es... ']
+['Dies ist eine Datei bro. ', '', 'Kümmern Sie sich nicht mit Trashend, sie verwenden die Kraft und ', '', 'Loslassen... ']
