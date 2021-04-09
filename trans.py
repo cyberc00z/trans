@@ -24,8 +24,8 @@ print("""%s
                                           (TRANSLATE PDFS AND  TEXT FILES)
 
                                           %sby Adhrit 
-                                          [twitter : https://twitter.com/xadhrit]
-                                          [github : https://github.com/xadhrit]
+                                           twitter : https://twitter.com/xadhrit 
+                                           github : https://github.com/xadhrit 
                                                  
        """%(R,Y,SB,G))
 
