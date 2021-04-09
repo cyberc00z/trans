@@ -1,0 +1,5 @@
+colorama
+PyPDF2
+google_trans_new
+pdfminer.six
+multiprocessing
