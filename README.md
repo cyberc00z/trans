@@ -1,5 +1,6 @@
 ## trans is a command line tool document language translation and format translation.
 
+<<<<<<< HEAD
 
 ```console
 
@@ -30,4 +31,6 @@
 
 
 
+=======
+>>>>>>> 7dd2e99bd5cfae2b489cd7bd0c7156e6b3514094
 ##### follow my github bros!
