@@ -15,9 +15,11 @@ page_content=[]
 for p in range(num_pages):
     page = pdfReader.getPage(p)
     text = page.extractText()
-    #print(text)
-    translation = t.translate(text.split(" "), lang)
-    print(len(translation))
+    text = text.readlines()
+    print(text)
+    #translation = t.translate(text.strip(" "), lang)
+    #print(len(translation))
+    #print(translation)
     """for line in range(len(translation)):
         result_text = translation[line].replace("\n\n", " ")
         page_content.append(result_text)
