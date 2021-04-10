@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import asyncio
-=======
->>>>>>> 7dd2e99bd5cfae2b489cd7bd0c7156e6b3514094
+
 import time
 from pdfminer.high_level import extract_text
 from PyPDF2 import PdfFileReader
@@ -12,13 +9,10 @@ pool = ThreadPool(8)
 
 lang = input("Enter target language : ")
 
-<<<<<<< HEAD
- def request(text):
-    translator = AsyncTranslator()
-=======
+
 def request(text):
     translator = google_translator(timeout=10)
->>>>>>> 7dd2e99bd5cfae2b489cd7bd0c7156e6b3514094
+                                                      
     new_file = translator.translate(text.strip(), lang)
     return new_file
 
