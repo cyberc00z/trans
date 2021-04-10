@@ -1,5 +1,5 @@
 colorama
 PyPDF2
-google_trans_new
+google-trans-new
 pdfminer.six
-multiprocessing
+
