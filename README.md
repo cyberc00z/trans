@@ -1,29 +1,13 @@
 ##                             TRANS
 
-                    [FOLLOw MY GITHUB BROS!!]  
-
-```console
-
-        tttt
-        t  t
-        t  t                               
-   tttttt  tttttt     rrrrrrrrr                
-  tttttt    tttttt   rrrrrrrr                  
-        t  t        rrr                         
-        t  t        rrr                         
-        t  t        rrr                        ANS 
-        tttt        rrr                        
-       
-                                          (TRANSLATE PDFS AND  TEXT FILES)
-                                         
-
-                                          by Adhrit 
-                                           twitter : https://twitter.com/xadhrit 
-                                           github : https://github.com/xadhrit 
-                                                 
+                    [FOLLOw MY GITHUB BROS!!]
 
 
-```
+<p align=center>
+<img src="s.png" height="500px" width="800px" alt="trans" />
+</p>
+
+
 
 
 
