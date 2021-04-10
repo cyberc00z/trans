@@ -31,7 +31,7 @@ print("""%s
 
 
 
-   
+
 # Standard Libraries
 import os
 import time
@@ -47,7 +47,7 @@ from multiprocessing.dummy import Pool as ThreadPool ## concurrecy and creating 
 pool = ThreadPool(8)
 
 ### asking for language in which you want to translate your pdf
-lang = input( W + "Enter target language : e.g. (en- english,zh- chiense ) : ")
+lang = input( W + "Enter target language : e.g. (en- english,zh- chienese, th-thai, de-destuche ) : ")
 
 # asking for where is pdf file
 _path = input(str(G+"Enter pdf file path or name(if in same folder) : "))
@@ -61,10 +61,9 @@ def check_file(_path):
             print( R + 'Invalid file or not a pdf ')
 
 def request(text):
-    translator = google_translator(timeout=20)
-    translated_text = translator.translate(text, lang)
-    result_text = translated_text.replace("\n", '')
-    return result_text
+    translator = google_translator(timeout=10)
+    translated_text = translator.translate(text.strip(), lang)                                                              
+    return translated_text
 
 
 
@@ -127,8 +126,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
 
 
     
