@@ -11,24 +11,34 @@ R = '\033[91m'  #red
 W = '\033[90m' #white
 
 
-print("""%s
-        tttt
-        t  t
-        t  t       %s
-   tttttt  tttttt     rrrrrrrrr
-  tttttt %s tttttt   rrrrrrrr
-        t  t        rrr
-        t  t        rrr
-        t  t        rrr                        ANS
-        tttt        rrr
 
+
+print(""" %s
+                                      tttt
+                                      t  t
+                                      t  t                                             
+                                 tttttt  tttttt   %s  rrrrrrrrr        aa                  nn
+                                                                                        n    n            ssssssssss
+                               ttttttt %s ttttttt   rrrrrrrrrr      aaa  aa           nn      nn          s      
+                                      t  t          rrr          aaa      aa         nn        nn         s   s    
+                                      t  t          rrr          aa  %s   aaa        nn        nn         ssssssss 
+                                      t  t          rrr          aa      aaaa        nn        nn               ss
+                                                                                                                  
+        
                                           (TRANSLATE PDFS AND  TEXT FILES)
-                                          %sby Adhrit
-                                          [twitter : https://twitter.com/xadhrit]
-                                          [github : https://github.com/xadhrit]
 
-       """%(R,Y,SB,G))
+                                          %sby Adhrit 
+                                           twitter : https://twitter.com/xadhrit 
+                                           github : https://github.com/xadhrit 
+                                                 
+       """%(R,Y,SB,G, P))
 
+
+
+
+  
+
+ 
 
 import os
 from google_trans_new import google_translator
