@@ -48,7 +48,7 @@ from multiprocessing.dummy import Pool as ThreadPool ## concurrecy and creating 
 pool = ThreadPool(8)
 
 ### asking for language in which you want to translate your pdf
-lang = input( W + "Enter target language : e.g. (en- english,zh- chienese, th-thai, de-destuche ) : ")
+lang = input( "Enter target language : e.g. (en- english,zh- chienese, th-thai, de-destuche ) : ")
 
 # asking for where is pdf file
 _path = input(str(G+"Enter pdf file path or name(if in same folder) : "))

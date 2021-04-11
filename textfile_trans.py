@@ -10,10 +10,12 @@ G= '\033[92m'   #green
 R = '\033[91m'  #red
 W = '\033[90m' #white
 
-
-
-
 print(""" %s
+
+
+                       PRINT THE MOST UGLY BANNER
+  
+
                                       tttt
                                       t  t
                                       t  t                                             
@@ -33,12 +35,6 @@ print(""" %s
                                                  
        """%(R,Y,SB,G, P))
 
-
-
-
-  
-
- 
 
 import os
 from google_trans_new import google_translator
@@ -77,9 +73,14 @@ def main():
         print( SB +  "Translating %s sentenctes, a total of %ss"%(len(texts), time2-time1))
         fp.close()
         result_file = f'{name}_{lang}.txt'
+        print('Creating file for translated text in %s_%s.txt '%(name, lang))
         ft = open(result_file, "w")
-        L = texts
-        ft.write(str(results))
+        L = texts 
+        #trying to write translation in good readable form
+        
+        results = str(results)
+        #results = results.replace('',)                  
+        ft.write(results)
         #ft.writelines(L)
         ft.close()
         print(G+'Done, success!')
