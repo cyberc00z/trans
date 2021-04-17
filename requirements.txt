@@ -1,4 +1,5 @@
-colorama
+rich
+pyfiglet
 PyPDF2
 google-trans-new
 pdfminer.six

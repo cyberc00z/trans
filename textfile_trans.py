@@ -1,62 +1,45 @@
-#!/usr/bin/env python
-import colorama
-
-#colors
-SB = '\033[96m'  #skyblue
-P = '\033[95m'  #pink
-B = '\033[94m'  #blue
-Y = '\033[93m'  #yellow
-G= '\033[92m'   #green
-R = '\033[91m'  #red
-W = '\033[90m' #white
-
-print(""" %s
-
-
-                       PRINT THE MOST UGLY BANNER
-  
-
-                                      tttt
-                                      t  t
-                                      t  t                                             
-                                 tttttt  tttttt   %s  rrrrrrrrr        aa                  nn
-                                                                                        n    n            ssssssssss
-                               ttttttt %s ttttttt   rrrrrrrrrr      aaa  aa           nn      nn          s      
-                                      t  t          rrr          aaa      aa         nn        nn         s   s    
-                                      t  t          rrr          aa  %s   aaa        nn        nn         ssssssss 
-                                      t  t          rrr          aa      aaaa        nn        nn               ss
-                                                                                                                  
-        
-                                          (TRANSLATE PDFS AND  TEXT FILES)
-
-                                          %sby Adhrit 
-                                           twitter : https://twitter.com/xadhrit 
-                                           github : https://github.com/xadhrit 
-                                                 
-       """%(R,Y,SB,G, P))
-
-
 import os
 from google_trans_new import google_translator
 from multiprocessing.dummy import Pool as ThreadPool
 import time
+from rich.console import Console
+from pyfiglet import Figlet
 
+
+
+# start here !!
 
 pool = ThreadPool(8) 
 
-lang=input( R + "Enter the target language :  ")
+pc = Console()
 
-_path = input(str( Y  + "Enter target file's path : "))
+lang= input( "Enter the target language :  ")
 
+_path = input(str( "Enter target file's path : "))
+
+
+def clearConsole():
+    cmd = 'clear'
+    if os.name is ('nt', 'dos'):
+        cmd = 'cls'
+    os.system(cmd)
 
 def request(text):
     t = google_translator(timeout=5)
     new_pdf = t.translate(text.strip(), lang)
     return new_pdf
 
+def banner():
+    clearConsole()
+    banner = Figlet(font='graffiti', justify='right')
+    pc.print(banner.renderText("TRANS"), style="yellow")
+
+
 def main():
+    # banner
+    banner()
     time1 = time.time()
-    print( G  +  "This method is good enough for big text files")
+    pc.print( "This method is good enough for big text files", style="yellow")
     name, ext = os.path.splitext(_path)     
     with open(_path, 'r') as fp:
         texts = fp.readlines()
@@ -70,10 +53,10 @@ def main():
         pool.join()
 
         time2 = time.time()
-        print( SB +  "Translating %s sentenctes, a total of %ss"%(len(texts), time2-time1))
+        pc.print( "Translating %s sentenctes, a total of %ss"%(len(texts), time2-time1), style="red")
         fp.close()
         result_file = f'{name}_{lang}.txt'
-        print('Creating file for translated text in %s_%s.txt '%(name, lang))
+        pc.print('Creating file for translated text in %s_%s.txt '%(name, lang), style="bright_cyan")
         ft = open(result_file, "w")
         L = texts 
         #trying to write translation in good readable form
@@ -83,6 +66,6 @@ def main():
         ft.write(results)
         #ft.writelines(L)
         ft.close()
-        print(G+'Done, success!')
+        pc.print('Done, success!', style="green")
 if __name__ == "__main__":
     main()
